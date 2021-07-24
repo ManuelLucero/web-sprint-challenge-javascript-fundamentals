@@ -26,14 +26,22 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
 
+Map can be used to return an array that contains the results of calling a specific function on each element of an original array. This is useful when we need to uniformly modify every element in an array or modify a set of values that are common within an array, and then store these new results (such as applying a universal holiday discount on all items in an inventory list and then pushing their respective price changes into a new list for comparison); reduce can be utilized to execute a specific function that collectively acts on the collection of elements in an array as a whole, returning a single value (e.g. to find the sum of a specific numerical property in a data-set (such as all of my debit transactions this month), reduce can add each value within a list and give the final summation); and, filter returns an entirely new array that contains each element of an original array that satisfies a specified condition.
+
 2. Explain the difference between a callback and a higher order function.
+
+A callback is what occurs when a call to a function is nested or otherwise contained in a block where the higher order function is not local, and the solution nonetheless wishes to invoke the function despite being outside of its immediate scope.
 
 3. Explain what a closure is.
 
+A closure is when a nested function calls for access to something within the scope of the outer function which contains it. Essentially, it's the inheritance of the scope of a parent function.
+
 4. Describe the four principles of the 'this' keyword.
+ 1) Whenever a funtion is global, the value of `this` inside of that function is essentially the entire browser or environment or "window"; 2) whenever a function is called using dot notation, the object before that dot is `this`; 3) when creating a 'constructor' function, `this` is used to refer to the object being created and returned by calling the 'constructor' function; and, 4) whenever .call() or .apply() is called, `this` becomes locally defined.
 
 5. Why do we need super() in an extended class?
-
+    Because super() is required whenever we need to access a parent class (or the 'constructor' of that class, rather) and its properties/methods. It's basically a forcefully logical invocation of inheritance.
+    
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
 ## Instructions
